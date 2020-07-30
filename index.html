@@ -2,179 +2,318 @@
 
 <html lang="en">
     <head>
-        <title>Prova prática</title>
+        <title>Prova Prática - Alpes Ones</title> 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="css/bootstrap.min.css" rel="stylesheet" />
-        <link href="css/fontawesome-free-5.13.1-web/css/all.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/assets/lib/owl-carousel/owl.theme.default.min.css">
+        <link rel="stylesheet" href="/assets/lib/owl-carousel/owl.carousel.min.css">  
+        <link href="/css/bootstrap.min.css" rel="stylesheet" /> 
+        <link href="/css/fontawesome-free-5.13.1-web/css/all.css" rel="stylesheet" />
         <link rel="icon" type="image/png" href="/assets/imagens/favicon.png" />
-
         <link rel="stylesheet" href="css/style.css" />
     </head>
  
 
-    <body> 
-
-        <div class="overlay"></div>
-
-        <header class="box-menu">
-            <div class="container">
-                <div class="row row-tablet">
-                    <div class="col-md-2 col-sm-3 col-xs-5">
-                        <div class="box-img-header">
-                            <a href="#">
-                                <img src="/assets/imagens/logo-in8-dev.svg" alt="IN8 DEV" title="IN8 DEV" />
-                            </a>
+    <body>         
+        <header class="box-header">
+            <div class="topo">
+                <div class="container">
+                    <div class="row row-mobile">
+                        <div class="col-md-4 col-sm-4 col-xs-2">
+                            <div class="icon-portal">
+                                <i class="fas fa-home"></i>
+                                <span>Ir para o Portal Banzai</span>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-8 col-xs-3">
+                            <div class="box-local-contato">
+                                <div class="local">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Encontre uma concessionária</span>
+                                </div>
+                                <div class="mail">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Fale conosco</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <div class="col-md-10 col-sm-10 col-xs-7">
-
-                        <div class="menu-toggle hidden-lg hidden-md">
-                            <a href="#" class="btn-toggle"> 
-                                <i class="fas fa-bars"></i>
-                            </a>
+            <div class="logo-and-infos">
+                <div class="container">
+                    <div class="row row-tablet">
+                        <div class="col-lg-5 col-md-2 col-sm-3 col-xs-12">
+                            <div class="box-img-header">
+                                <a href="#">
+                                    <img src="/assets/imagens/logo.png" alt="Logo" title="Logo" class="img-responsive" /> 
+                                </a>
+                            </div>
                         </div>
 
-                        <nav id="sidebar-wrapper">
-                            <ul class="menu">
-                                <li class="current-menu"><a href="#">cadastro</a></li>
-                                <li><a href="#">lista</a></li>
-                                <li><a href="#">sobre mim</a></li>
-                            </ul>
-                        </nav>  
-                
-                        
+                        <div class="col-lg-7 col-md-10 col-sm-9 col-xs-12"> 
+                            <div class="box-atendimento">
+                                <div class="itens">
+                                    <span class="txt-central">Central de atendimento</span>
+                                    <span class="phone">(31) 3123-1234</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
 
         
-        <section class="first-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 ">
+        <section class="section-banner">
 
-                        <div class="box-infos-banner">
-                            <h1>Estágio</h1>
-                            <h2>Prova de Seleção</h2>
-                        </div>    
+            <div class="box-banner-mobile">
+                <img src="/assets/imagens/civic-banner-mobile.png" alt="Honda Civic" title="Honda Civic" class="img-responsive" />
+            </div>
+           
+
+            <div class="box-nome-civic-mobile">
+                <img src="/assets/imagens/nome-civic-mobile.png" alt="Honda Civic" title="Honda Civic" class="img-responsive" />
+            </div>
+           
+            <div class="box-certificado">
+                <img src="/assets/imagens/certificado.png" alt="Certificado" title="Certificado" class="img-responsive" />
+            </div>    
+            <div class="container">
+                <div class="row row-form">
+                    <div class="col-lg-2 col-xs-3 col-sm-3 box-solicite-contato">
+                        <div class="infos">
+                            <i class="fas fa-phone-volume"></i>
+                            <span>Solicitar um <br><b>contato</b></span>
+                        </div>
+                        <div class="box-form">
+                            <form action="" method="POST">
+                                <label for="" class="nome"><input type="text"  name="nome" placeholder="Nome"></label>
+                                <label for="" class="mail"><input type="text" name="email" placeholder="Email"></label> 
+                                <label for="" class="tel"><input type="text" name="telefone" placeholder="Telefone" class="phone"></label>
+                                <div class="select">
+                                    <select name="horario" id="format">
+                                        <option value="" selected disabled>11:00</option>
+                                        <option value="">12:00</option>
+                                        <option value="">13:00</option>
+                                    </select>  
+                                </div>
+                                <div class="select unidade">
+                                    <select name="unidade" id="format">
+                                        <option value="" selected disabled>Escolha a unidade</option>
+                                        <option value="">Belo Horizonte</option>
+                                        <option value="">Nova Lima</option>
+                                        <option value="">Contagem</option>
+                                    </select>  
+                                </div> 
+                                <button type="submit" class="btn-form">Agendar test drive</button>
+                            </form>
+
+
+                        </div>
+
+
                         
-                    </div>
+                    </div> 
                 </div>
             </div>
         </section>
 
 
-        <section class="two-section padd-height">
+        <section class="box-emotion-driver">
             <div class="container">
                 <div class="row">
-                    <div class="content">
-                        <div class="col-lg-offset-2 col-lg-8 col-sm-offset-1 col-sm-10">
-                            <h2 class="text-center title-sections">Cadastro</h2>
-    
-                            <form action="" method="" class="form-home">  
-                                <div class="box-fields">
-                                    <label class="field">
-                                        <input type="text">
-                                        <b>Nome</b>
-                                    </label>
-                                    
-                                </div>
-
-                                <div class="box-fields">
-                                    <label class="field">
-                                       <input type="text"> 
-                                       <b>E-mail</b>
-                                    </label>
-                                </div>
-
-                                <div class="box-fields">
-                                    <label class="field">
-                                       <input type="text"> 
-                                       <b>Nascimento</b>
-                                    </label>
-                                </div>
-
-    
-                                <div class="box-fields">
-                                    <label class="field">
-                                       <input type="text" id="tel"> 
-                                       <b>Telefone</b>
-                                    </label> 
-                                </div>
-
-                                <div class="box-btn">
-                                    <button type="submit" class="btn-first-type">Cadastrar</button>
-                                </div>
-                            </form> 
+                    <div class="col-lg-12">
+                        <h2 class="title-sections">A emoção de dirigir leva você mais longe</h2>
+                    </div>
+                </div>
+                <div class="row infos-car">
+                    <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs">
+                        <div class="mini-images">
+                            <img src="/assets/imagens/lado1.jpg" alt="Honda Civc" title="Honda Civc" class="img-responsive" />
+                            <img src="/assets/imagens/lado2.jpg" alt="MHonda Civc" title="Honda Civc" class="img-responsive" />
+                            <img src="/assets/imagens/lado3.jpg" alt="Honda Civc" title="Honda Civc" class="img-responsive" />
+                        </div>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10">
+                        <div class="big-car">
+                            <img src="/assets/imagens/juntos.jpg" alt="Honda Civc" title="Honda Civc" class="img-responsive" />
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-
-        <section class="three-section padd-height">
-            <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <h2 class="text-center title-sections">Lista de cadastro</h2>
-
-                        <table class="table-cadastro">
-                            <tr>
-                                <td width="122"></td>
-                                <td width="220" class="name-box">Nome</td>
-                                <td width="220" class="name-box">E-mail</td>
-                                <td width="220" class="name-box">Nascimento</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Fulano Beltrano de Oliveira da Silva</td>
-                                <td>fulanobos@gmail.com</td>
-                                <td>13/10/1995</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Ralf</td>
-                                <td>26</td>
-                                <td>Designer</td>
-                            </tr>
-                        </table>
-
+                    <div class="col-lg-12 box-about-car">    
+                        <p>O novo Civic Geração 10 traz um design único mudando a categoria de sedãs para sempre. Ele garante a melhor dirigibilidade com o máximo em sofisticação e conforto, atribuído por seu design interno e diferenciada ergonomia.</p>
                     </div>
                 </div>
             </div>
         </section>
 
 
-
-        <footer class="footer padd-height">
-            <div class="container">
+        <section class="full-painel-civic">
+            <div class="container box-infos">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="content">
-                            <p>Fulano Beltrano de Oliveira da Silva</p> 
-                            <span><a href="mailto:fulanobos@gmail.com">fulanobos@gmail.com</a></span>
-                            <span>(31) 9 9666-1111</span>
-                            <span>Faculdade de Belo Horizonte</span>
-                        </div>
+                    <div class="col-lg-12">
+                        <h2 class="title-sections">Prepare-se para algo realmente novo</h2>
+                        <p>O Novo Civic Geração 10 vem completo de série. Conheça a versão perfeita para você.</p>
                     </div>
                 </div>
             </div>
-        </footer>
-          
-
-        <a href="#" class="up-top scrollToTop">          
-            <div class="arrow-left"></div>
-            <div class="arrow-right"></div>
-            <div class="arrow-left three"></div>
-            <div class="arrow-right four"></div>
-        </a>
+        </section>
         
-        <script src="assets/lib/jquery/jquery-3.5.1.min.js"></script>
-        <script src="js/scripts-main.js"></script>
+
+        <section class="blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="owl-carousel">
+                            <article>
+                                <figure>
+                                    <img src="/assets/imagens/dire-eletrica.jpg" alt="Direção Elétrica" title="Direção Elétrica" />
+                                </figure>
+                                <div class="box-infos">
+                                    <h3>Direção com assistência</h3>
+                                    <p>Sistema de estabilidade que reforça automaticamente o retorno da direção, auxiliando o motorista em situações onde o carro está ameaçado de instabilidade.</p>
+                                </div>
+                            </article>
+                            <article>
+                                <figure>
+                                    <img src="/assets/imagens/vidro-eletrico.jpg" alt="Direção Elétrica" title="Direção Elétrica" />
+                                </figure> 
+                                <div class="box-infos">
+                                    <h3>Vidros elétricos com subida</h3>
+                                    <p>Todas as portas possuem vidros elétricos com a função "um toque" e sistema de segurança antiesmagamento.</p>
+                                </div>
+                            </article>
+                            <article>
+                                <figure>
+                                    <img src="/assets/imagens/cambio-aut.jpg" alt="Direção Elétrica" title="Direção Elétrica" />
+                                </figure>
+                                <div class="box-infos">
+                                    <h3>Câmbio CVT com Paddle Shift</h3>
+                                    <p>O câmbio com transmissão CVT de 7 velocidade com Paddle Shift(aletas) proporciona conforto ao trocar de marchas.</p>
+                                </div>
+                            </article>
+                            <article>
+                                <figure>
+                                    <img src="/assets/imagens/dire-eletrica.jpg" alt="Direção Elétrica" title="Direção Elétrica" />
+                                </figure>
+                                <div class="box-infos">
+                                    <h3>Direção com assistência</h3>
+                                    <p>Sistema de estabilidade que reforça automaticamente o retorno da direção, auxiliando o motorista em situações onde o carro está ameaçado de instabilidade.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+
+        <section class="saiba-mais">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="title-sections">Pronto para ter um Honda?</h2>
+                        <p>Conheça os últimos grandes lançamentos da Honda</p>
+                    </div>
+                </div>
+                <div class="row mobile-attack">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <article>
+                            <img src="/assets/imagens/accord.jpg" alt="Accord" title="Accord" />
+                            <div class="box-infos">
+                                <p>Novo Honda Accord: a combinação perfeita de três atributos exigidos pelo consumidor: elegância, luxo e alto desempenho.</p>
+                            </div>
+                            <div class="box-arrow-mobile hidden-lg hidden-md hidden-sm">
+                                <i class="fas fa-chevron-down arrow"></i>   
+                            </div>
+                            <a href="#" class="btn-saiba">Conheça mais</a>
+                        </article>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 box-hidden">
+                        <article>
+                            <img src="/assets/imagens/city.jpg" alt="City" title="City" />
+                            <div class="box-infos">
+                                <p>Novo Honda Accord: a combinação perfeita de três atributos exigidos pelo consumidor: elegância, luxo e alto desempenho.</p>
+                            </div>
+                            <a href="#" class="btn-saiba">Conheça mais</a>
+                        </article>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 box-hidden">
+                        <article>
+                            <img src="/assets/imagens/fit.jpg" alt="Fit" title="Fit" />
+                            <div class="box-infos">
+                                <p>Novo Honda Accord: a combinação perfeita de três atributos exigidos pelo consumidor: elegância, luxo e alto desempenho.</p>
+                            </div>
+                            <a href="#" class="btn-saiba">Conheça mais</a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+       <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12 infos-socials">
+                        <div class="balloon content-encontre"> 
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Encontre uma <br><b>concessionária</b></span> 
+                        </div>
+                        <div class="balloon content-atendimento">
+                            <span class="txt-central">Central de atendimento</span>
+                            <span class="phone">(31) 3123-1234</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 redes-sociais">
+                        <span class="follow">Siga a Banzai nas redes sociais</span>
+                        <div class="icons-socials">
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>     
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>    
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>        
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 ">
+                            <div class="box-infos-copy">
+                                <a href="#" class="logo-honda">
+                                    <img src="/assets/imagens/logo.png" alt="Logo" title="Logo" class="img-responsive" /> 
+                                </a>
+                                <div class="box-slogan-image">
+                                    <p>Todos juntos fazem um trânsito melhor</p>
+                                    <img src="/assets/imagens/logo_ibama.png" alt="Ibama" title="Ibama" class="img-responsive" /> 
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer> 
+        
+          
+        <script src="/assets/lib/jquery/jquery-3.5.1.min.js"></script> 
+        <script src="/assets/lib/owl-carousel/owl.carousel.min.js"></script>  
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/css/fontawesome-free-5.13.1-web/js/all.js"></script> 
+        <script type='text/javascript' src='//igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js'></script>
+        <script src="/assets/lib/jQuery-Mask-Plugin-master/jquery.mask.js"></script>
+        <script src="/js/scripts-main.js"></script> 
     </body>
  
-</html>
+</html> 

@@ -1,0 +1,50 @@
+.box-emotion-driver {
+    padding: 45px 0;
+
+    .infos-car {
+        margin-top: 45px;
+        .mini-images {
+            display: flex;
+            flex-direction: column;
+            img {
+                border: 1px solid #D5D5D5;
+                padding: 2px;
+                margin-bottom: 6px;
+            }
+        }
+        .big-car {
+            padding: 53px 0 0 15px;
+        }
+    }
+
+    .box-about-car {
+        margin: 36px 0 0;
+        p {
+            font-family: FoundryMonoline;
+            font-size: 18px;
+            color: black;
+        }
+    }
+    
+}
+
+
+
+@media(max-width: 480px) {
+
+    .box-emotion-driver {
+        margin: 40px 0 0;
+        padding: 0;
+        .infos-car {
+            .big-car {
+                padding: 0 0 0 15px;
+            }
+        }
+        .box-about-car {
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
+

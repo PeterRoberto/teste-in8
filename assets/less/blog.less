@@ -1,0 +1,149 @@
+.blog {
+    padding: 35px 0;
+
+    article {
+        // width: 260px;
+        figure {
+            height: 180px; 
+            img {
+                border: 1px solid #D5D5D5;
+                padding: 4px;
+            }
+        }
+        
+        .box-infos {
+            h3 {
+                font-family: FoundryMonoline-ExBdIta;
+                font-size: 19px;
+                color: black;
+                margin: 20px 0 15px;
+                font-weight: 500;
+                opacity: 1;
+            }
+            p {
+                font-family: FoundryMonoline;
+                font-size: 15px;
+            }
+        }
+    }
+
+    .owl-nav {
+
+        svg, i {
+            color: white;
+            font-size: 20px;
+        }
+        .owl-prev {
+            position: absolute;
+            top: 73px;
+            left: 20px;
+            width: 39px;
+            height: 39px;
+            background: rgba(213, 213, 213, 0.4) !important; 
+            border-radius: 50%;
+            &:focus {
+                outline: 0;
+            } 
+        }
+        .owl-next {
+            position: absolute;
+            top: 73px;
+            right: 20px;
+            width: 39px;
+            height: 39px;
+            background: rgba(213, 213, 213, 0.4) !important; 
+            border-radius: 50%; 
+            &:focus {
+                outline: 0;
+            } 
+        }
+    }
+
+    .owl-dots {
+        display: flex;
+        justify-content: center; 
+        margin: 30px 0 0;
+        .owl-dot {
+            margin-right: 15px;
+            width: 15px;
+            height: 15px; 
+            background: #D5D5D5 !important;
+            border-radius: 50%;
+            &:focus {
+                outline: 0;
+            } 
+        }
+        .owl-dot.active {
+            background: #707070 !important;
+        }
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1280px) {
+    .blog {    
+        article {
+            figure {
+                height: 212px;
+                img {
+                    max-width: 100%;
+                    margin: auto; 
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 991px) {
+
+    .blog {    
+        article {
+            figure {
+                height: 158px;
+            }
+        }
+    }
+}
+
+
+
+@media(max-width: 480px) {
+
+    .blog {    
+        article {
+            figure {
+                height: auto; 
+            }
+            
+            .box-infos {
+                h3 {
+                    font-size: 20px;
+                    text-align: center;
+                }
+                p {
+                    text-align: center;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .owl-nav {
+            .owl-prev {
+                top: 112px;
+            }
+            .owl-next {
+                top: 112px;
+            }
+        }
+    
+        .owl-dots {
+            margin: 45px 0 30px;
+        }
+
+    }
+}
+
+
+
+

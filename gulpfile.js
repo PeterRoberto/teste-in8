@@ -3,17 +3,18 @@ var less = require('gulp-less');
 var path = require('path');
 var concat = require('gulp-concat'); 
 var uglify = require('gulp-uglify');  
+var autoPrefixer = require('gulp-autoprefixer');
 var watch = require('gulp-watch');  
 var validator = require('gulp-html');
 var browserSync = require("browser-sync");
-var webfontsGenerator = require('webfonts-generator');
+// var webfontsGenerator = require('webfonts-generator');
 
 function html(done) {
   gulp.src('*.html')
   // .pipe(validator())
   .pipe(browserSync.stream())
   // .pipe(gulp.dest('./css'));
- 
+  .pipe(browserSync.stream())
 
   done();
 }
@@ -23,6 +24,7 @@ function css(done) {
   .pipe(less({
     paths: [ path.join(__dirname, 'less', 'includes') ]
   }))
+  .pipe(autoPrefixer('last 2 versions'))
   .pipe(concat('style.css'))  //contatena em um arquivo chamado main.js   
   // .pipe(uglify())
   .pipe(browserSync.stream())
@@ -51,14 +53,14 @@ function reload() {
 }
 
 
-function webfontsGenerator(done) {
-  gulp.src('./assets/Fonts/*.ttf') //pega todos os arquivos .js que estão na pasta src   
-  .pipe(concat('style.css'))  //contatena em um arquivo chamado main.js   
-  .pipe(browserSync.stream())
-  .pipe(gulp.dest('web'));
+// function webfontsGenerator(done) {
+//   gulp.src('./assets/Fonts/*.ttf') //pega todos os arquivos .js que estão na pasta src   
+//   .pipe(concat('style.css'))  //contatena em um arquivo chamado main.js   
+//   .pipe(browserSync.stream())
+//   .pipe(gulp.dest('web'));
   
-  done();
-}
+//   done();
+// }
 
 
 // webfontsGenerator({
@@ -83,8 +85,8 @@ function watchFiles() {
   gulp.watch("./assets/less/*.less", css);
   gulp.watch("./assets/js/*.js", gulp.series(js));
   gulp.watch("*.html", html);
-  gulp.watch("./assets/Fonts/*.ttf", webfontsGenerator);
-  browserSync.init({
+  // gulp.watch("./assets/Fonts/*.ttf", webfontsGenerator);
+  browserSync.init({   
     server: {
       baseDir: "./"
     }
@@ -92,26 +94,15 @@ function watchFiles() {
   gulp.watch("./assets/less/*.less", css);
   gulp.watch("./assets/js/*.js", js);
   gulp.watch("/*.html", html);  
-  gulp.watch("*.ttf", webfontsGenerator); 
+  // gulp.watch("*.ttf", webfontsGenerator); 
 
-  // gulp.watch(
-  //   [
-  //     "./_includes/**/*",
-  //     "./_layouts/**/*",
-  //     "./_pages/**/*",
-  //     "./_posts/**/*",
-  //     "./_projects/**/*"
-  //   ],
-  //   gulp.series(jekyll, browserSyncReload)
-  // );
 }
 
 
 gulp.task("css", css);
 gulp.task("js", js);
 gulp.task("html", html);
-gulp.task("ttf", webfontsGenerator);
-gulp.task("default", gulp.parallel(html,css, js, webfontsGenerator));
+gulp.task("default", gulp.parallel(html,css, js));
 gulp.task("watch", gulp.series(watchFiles));
 
 

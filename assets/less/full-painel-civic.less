@@ -1,0 +1,46 @@
+.full-painel-civic {
+    background-image: url(/assets/imagens/painel-dentro.jpg);
+    height: 415px;
+    background-size: cover;
+    position: relative;
+
+    .box-infos {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        right: 0;
+        .title-sections {
+            color: white;
+            text-transform: uppercase;
+        }
+        p {
+            font-family: FoundryMonoline;
+            color: white;
+            font-size: 18px;
+        }
+    }
+    
+}
+
+@media(max-width: 991px) {
+    .full-painel-civic {
+        height: 250px;
+    }
+}
+
+
+
+@media(max-width: 480px) {
+
+    .full-painel-civic {
+        background-image: url(/assets/imagens/painel-dentro-mobile.jpg);
+        height: 415px;
+        margin: 35px 0 0;
+        .box-infos {
+            p {
+                text-align: center;
+            }
+        }
+    }
+
+}

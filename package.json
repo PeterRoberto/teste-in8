@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/PeterRoberto/estudando-javascript#readme",
   "dependencies": {
-    "ansi-styles": "^4.2.1"
+    "ansi-styles": "^4.2.1",
+    "autoprefixer": "^9.8.5",
+    "gulp-autoprefixer": "^7.0.1"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
